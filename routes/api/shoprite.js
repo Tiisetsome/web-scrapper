@@ -42,10 +42,10 @@ router.get(
       throw new Error("Category is not specified");
     }
 
-    // if (process.env.NODE_ENV === "development") {
-    //   // NB : Dangerous, please look for a solution, not a hack
-    //   process.env["NODE_TLS_REJECT_UNAUTHORIZED"] = 0;
-    // }
+    if (process.env.NODE_ENV === "development") {
+      // NB : Dangerous, please look for a solution, not a hack
+      process.env["NODE_TLS_REJECT_UNAUTHORIZED"] = 0;
+    }
 
     setURLHeader(req);
 
